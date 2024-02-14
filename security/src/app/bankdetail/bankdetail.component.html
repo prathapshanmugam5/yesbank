@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h2 style="color: navy;" class="text-center">Account Details</h2>
+      <div class="container-fluid">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-dark" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div *ngIf="newAccountData" class="row">
+        <div class="col-md-4 offset-md-8 text-end">
+          
+          <img src="{{newAccountData.image}}" alt="" width="150px" height="150px">
+        </div>
+
+        <div class="col-md-8">
+          <p><strong style="color: blue;">Customer Id : </strong>{{newAccountData.id}}</p>
+          <p><strong style="color: blue;">Account NO : </strong>{{newAccountData.accountnumber}}</p>
+          <p><strong style="color: blue;">IfcCode : </strong>{{newAccountData.ifccode}}</p>
+
+          <p><strong style="color: blue;">Name : </strong> {{ newAccountData.name }}</p>
+          <p><strong style="color: blue;">Father Name : </strong> {{ newAccountData.fathername }}</p>
+          <p><strong style="color:blue">Age : </strong>{{newAccountData.age}}</p>
+          <p><strong style="color: blue;">Gender : </strong>{{newAccountData.gender}}</p>
+          <p><strong style="color: blue;">Mobile : </strong>{{newAccountData.mobile}}</p>
+          <p><strong style="color: blue;">Mail ID : </strong>{{newAccountData.email}}</p>
+          <p><strong style="color: blue;">Aadhar No : </strong>{{newAccountData.aadharno}}</p>
+          <p><strong style="color: blue;">Pan No : </strong>{{newAccountData.panno}}</p>
+          <p><strong style="color: blue;">Address : </strong>{{newAccountData.address}}</p>
+          <div class="custom-btn-group" role="group" aria-label="Button group">
+            <button class="btn btn-success" (click)="fundtransfer()">Fund Transfer</button>
+            <button type="button" class="btn btn-warning" (click)="transaction()">Transaction History</button>
+            <button type="button" class="btn btn-outline-secondary" (click)="loanapply()">Loan Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!newAccountData">
+        <p>No account details found for {{ name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

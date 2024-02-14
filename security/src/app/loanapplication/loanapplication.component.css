@@ -1,0 +1,22 @@
+/* Styles for the image container */
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+/* Styles for the banner image */
+.banner-image {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Styles for the text container */
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust the text color based on your design */
+}

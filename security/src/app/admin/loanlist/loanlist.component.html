@@ -1,0 +1,41 @@
+<p>loanlist works!</p>
+<table class="table table-hover">
+    <thead>
+        <tr style="color: blue;">
+            <th>Sno</th>
+            <th>Id </th>
+            <th>Account No</th>
+            <th>Loan Amount</th>
+            <th>Rate of Interest</th>
+            <th>Loan Tenure</th>
+            <th>Monthly Salary</th>
+            <th>Anual Income</th>
+            
+            <th>Monthly EMI</th>
+            <th>Interest</th>
+            <th>Total Amount</th>
+            <th>Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of loanapp;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{c.id}}</td>
+            <td>{{c.acno}}</td>
+            <td>{{c.loanamount}}</td>
+            <td>{{c.rateofinterset}}</td>
+            <td>{{c.numberofyear}}</td>
+            <td>{{c.monthlysalary}}</td>
+            <td>{{c.anualincome}}</td>  
+            <td>{{c.emi}}</td>
+            <td>{{c.interest}}</td>
+            <td>{{c.total}}</td>
+            <td>
+                <button class="btn btn-outline-success" >Approval</button>
+                <button class="btn btn-outline-danger" (click)="deleteid(c.id)">Rejected</button>
+                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

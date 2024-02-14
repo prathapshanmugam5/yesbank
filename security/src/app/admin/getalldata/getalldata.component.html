@@ -1,0 +1,22 @@
+<div class="card-container">
+    <div class="card" *ngFor="let c of credit; let i=index">
+      <div class="card-header" style="color: blue;">Details {{i+1}}</div>
+      <div class="card-body">
+        <p><strong>Id:</strong> {{c.id}}</p>
+        <p><strong>Bank Customer:</strong> {{c.bankcustmer}}</p>
+        <p><strong>Pan no:</strong> {{c.pan}}</p>
+        <p><strong>Mobile No:</strong> {{c.mobile}}</p>
+        <p><strong>Occupation:</strong> {{c.occupation}}</p>
+        <p><strong>Organization Name:</strong> {{c.organization}}</p>
+        <p><strong>Address line1:</strong> {{c.addresslineone}}</p>
+        <p><strong>Address line2:</strong> {{c.addresslinetwo}}</p>
+        <p><strong>Pincode:</strong> {{c.pincode}}</p>
+        <p><strong>City:</strong> {{c.city}}</p>
+        <p><strong>Communication:</strong> {{c.communication}}</p>
+        <p><strong>Salary:</strong> {{c.salary}}</p>
+        <button type="button" class="btn btn-success">APPROVAL</button>
+        <button type="button" class="btn btn-danger" (click)="deleteid(c.id)">DELETE</button>
+      </div>
+    </div>
+  </div>
+  
